@@ -13,12 +13,33 @@
     @media(max-width:370px){.navlinks{gap:10px}.navlinks a{font-size:9px}.hero-actions{gap:13px}.button{padding:14px 13px;font-size:9px}.text-link{font-size:10px}.category{padding:13px;min-height:205px}.category h3{font-size:16px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
   </style>
+  <style>
+    .first-picks{padding-top:18px;border-top:1px solid var(--line)}
+    .pick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .pick{min-height:285px;padding:26px;border:1px solid #443923;background:radial-gradient(circle at 80% 20%,#ab83401b,transparent 45%),linear-gradient(150deg,#1b1914,#10100e 72%);display:flex;flex-direction:column;align-items:flex-start}
+    .pick-meta{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--gold-light);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+    .pick-mark{margin:auto 0 15px;color:#8e764c;font:italic 70px/1 var(--serif);letter-spacing:-.08em}
+    .pick h3{font:400 25px/1.15 var(--serif);margin:0 0 10px}
+    .pick p{font-size:11px;line-height:1.7;color:#ada699;margin:0;max-width:250px}
+    .selection-note{margin:19px 0 0;padding-left:14px;border-left:1px solid var(--gold);font-size:11px;line-height:1.7;color:#b9b09c}
+    .faq{border-top:1px solid var(--line);padding:73px 0}
+    .faq-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+    .faq h2{font:500 clamp(35px,5vw,54px)/1.05 var(--serif);letter-spacing:-.03em;margin:15px 0}
+    .faq-intro{color:#aaa69b;font-size:12px;line-height:1.75;max-width:310px}
+    .faq details{border-bottom:1px solid #484034;padding:18px 0}
+    .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font:18px var(--serif)}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary:after{content:'+';color:var(--gold);font:20px var(--sans)}
+    .faq details[open] summary:after{content:'−'}
+    .faq details p{color:#aaa69b;font-size:12px;line-height:1.8;max-width:510px;margin:12px 25px 0 0}
+    @media(max-width:760px){.first-picks{padding-top:0}.pick-grid{grid-template-columns:1fr}.pick{min-height:205px;padding:20px}.pick-mark{font-size:49px;margin:25px 0 10px}.pick h3{font-size:23px}.faq{padding:56px 0}.faq-layout{grid-template-columns:1fr;gap:18px}}
+  </style>
   <link rel="alternate" hreflang="en" href="https://javiersteven13.github.io/nova-auto/en/">
   <link rel="alternate" hreflang="es" href="https://javiersteven13.github.io/nova-auto/">
 </head>
 <body>
   <div class="topline"></div>
-  <header><div class="wrap nav"><a class="brand" href="#inicio" aria-label="NOVA AUTO, inicio">NOVA <b>AUTO</b></a><nav class="navlinks" aria-label="Navegación principal"><a href="#coleccion">Colección</a><a href="#filosofia">La idea</a><a class="nav-cta" href="#coleccion">Próximamente</a><a class="lang-link" href="en/" lang="en" aria-label="View in English">EN</a></nav></div></header>
+  <header><div class="wrap nav"><a class="brand" href="#inicio" aria-label="NOVA AUTO, inicio">NOVA <b>AUTO</b></a><nav class="navlinks" aria-label="Navegación principal"><a href="#seleccion">Productos</a><a href="#filosofia">La idea</a><a class="nav-cta" href="#preguntas">Cómo comprar</a><a class="lang-link" href="en/" lang="en" aria-label="View in English">EN</a></nav></div></header>
   <main>
     <section class="hero" id="inicio"><div class="wrap hero-inner"><div class="hero-copy"><div class="eyebrow">Accesorios para cada trayecto</div><div class="soon">La tienda abre próximamente</div><h1>Tu coche.<span>Más a tu manera.</span></h1><p>Accesorios prácticos para que cada día al volante se sienta más cómodo, ordenado y conectado.</p><div class="hero-actions"><a class="button" href="#coleccion">Descubre la idea <span aria-hidden="true">↘</span></a><a class="text-link" href="#filosofia">Conoce NOVA AUTO<span>→</span></a></div></div><div class="hero-art" aria-label="Ilustración conceptual de un celular en su soporte para el coche" role="img"><div class="halo"></div><div class="art-label">Diseñado para tu día a día</div><div class="device"><div class="device-screen"><div class="screen-light"></div><div class="phone-ui"><div class="phone-top">NOVA · DRIVE</div><div class="phone-time">9:41</div><div class="phone-date">Tu próximo trayecto, a tu ritmo.</div><div class="phone-line"></div><div class="phone-date">MODO DE CONDUCCIÓN</div><div class="phone-card"><small>TODO EN SU LUGAR</small><strong>En camino.</strong><span>Una pausa. Una canción. Tu ruta.</span></div></div></div></div><div class="mount"><div class="mount-head"></div><div class="mount-neck"></div></div><div class="art-index">01 — Conectado y en camino</div></div></div></section>
     <div class="trustline"><div class="wrap trust-inner"><div class="trust-item"><i>✳</i> Práctico por diseño</div><div class="trust-item"><i>◌</i> Comodidad diaria</div><div class="trust-item"><i>⌁</i> Detalles que suman</div><div class="trust-item"><i>◇</i> Colección en preparación</div></div></div>
@@ -30,7 +51,13 @@
       <article class="category"><div class="category-top"><span class="category-num">05 / CUIDADO</span><span class="preview">Próximamente</span></div><div class="icon"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M23 31h34l-3 31H26l-3-31Z"/><path d="M31 31v-8a9 9 0 0 1 18 0v8M31 41h18m-14 9h10"/><path d="m61 15 2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Z"/></svg></div><div class="category-bottom"><h3>Limpieza interior</h3><p>Accesorios para cuidar cada detalle.</p></div></article>
       <article class="category"><div class="category-top"><span class="category-num">06 / COMODIDAD</span><span class="preview">Próximamente</span></div><div class="icon"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M23 58V35c0-5 4-9 9-9h16c5 0 9 4 9 9v23M23 46h34M31 26v-7h18v7M18 58h44v6H18z"/><path d="M28 36h24M28 52h24"/></svg></div><div class="category-bottom"><h3>Comodidad a bordo</h3><p>Pequeñas mejoras para todos los días.</p></div></article>
     </div></div></section>
+    <section class="section first-picks" id="seleccion"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Primera selección</div><h2>Útiles desde el<br>primer trayecto.</h2></div><p class="section-desc">Tres ideas para empezar. Estamos comprobando modelos y proveedores antes de anunciar productos concretos.</p></div><div class="pick-grid">
+      <article class="pick"><div class="pick-meta"><span>01 / ORDEN</span><span>En preparación</span></div><div class="pick-mark" aria-hidden="true">01</div><h3>Organizador para respaldo</h3><p>Más espacio para llevar lo que necesitas dentro del coche.</p></article>
+      <article class="pick"><div class="pick-meta"><span>02 / CUIDADO</span><span>En preparación</span></div><div class="pick-mark" aria-hidden="true">02</div><h3>Kit de limpieza interior</h3><p>Una propuesta para cuidar tablero, rejillas y rincones del habitáculo.</p></article>
+      <article class="pick"><div class="pick-meta"><span>03 / ORDEN</span><span>En preparación</span></div><div class="pick-mark" aria-hidden="true">03</div><h3>Papelera compacta</h3><p>Una manera sencilla de mantener el interior más ordenado.</p></article>
+    </div><p class="selection-note">Esta es una vista previa de ideas, no fichas de productos disponibles. Confirmaremos modelo, contenido, precio y condiciones antes de abrir pedidos en Estados Unidos.</p></div></section>
     <section class="vision" id="filosofia"><div class="wrap vision-grid"><div class="vision-mark" role="img" aria-label="Monograma de NOVA AUTO"><div class="monogram">N/A</div></div><div class="vision-copy"><div class="eyebrow">La idea detrás de NOVA</div><h2>Lo útil también<br>puede sentirse especial.</h2><p>NOVA AUTO nace de una idea sencilla: algunos accesorios pueden hacer que usar el coche cada día sea más fácil y agradable. Por eso estamos preparando una tienda enfocada en organización, conectividad, cuidado y comodidad para el interior.</p><p>Sin complicaciones. Solo detalles pensados para acompañarte en el camino.</p><div class="vision-note">La tienda aún no está abierta. Los productos estarán disponibles cuando la colección esté lista.</div></div></div></section>
+    <section class="faq" id="preguntas"><div class="wrap faq-layout"><div><div class="eyebrow">Antes de empezar</div><h2>Así será la compra.</h2><p class="faq-intro">Queremos que tengas la información completa antes de hacer un pedido.</p></div><div><details open><summary>¿Ya puedo comprar?</summary><p>Aún no. Estamos verificando los primeros productos y preparando la atención al cliente y el pago.</p></details><details><summary>¿Dónde estará disponible?</summary><p>La primera etapa está pensada para clientes en Estados Unidos. Confirmaremos los destinos de envío de cada producto antes de publicarlo.</p></details><details><summary>¿Cuándo conoceré el precio y la entrega?</summary><p>Mostraremos el precio total, el contenido del producto y las condiciones de entrega antes de habilitar cualquier compra.</p></details></div></div></section>
     <section class="closing"><div class="wrap"><div class="eyebrow">NOVA AUTO · Próximamente</div><h2>Una forma más cómoda de ir a donde vas.</h2><p>Estamos dando forma a nuestra primera colección de accesorios prácticos para coche.</p><a class="button" href="#coleccion">Ver categorías <span aria-hidden="true">↑</span></a></div></section>
   </main>
   <footer><div class="wrap footer-row"><div><div class="foot-brand">NOVA <span>AUTO</span></div><div class="footer-tag" style="margin-top:7px">Accesorios para tu día a día</div></div><div class="footer-copy">© <span id="year"></span> NOVA AUTO<br>La tienda abrirá próximamente.</div></div></footer>
